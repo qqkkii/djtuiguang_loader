@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.location.replace('https://page.hguo.site');
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://page.hguo.site">
+  </noscript>
+  <title>正在打开...</title>
+  <style>
+    .loader {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #3498db;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .fallback {
+      position: fixed;
+      top: 20%;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      font: 14px sans-serif;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .loader {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader" role="status" aria-label="正在打开页面"></div>
+  <p class="fallback"><a href="https://page.hguo.site">若未自动跳转，请点击打开</a></p>
+</body>
+
+</html>
